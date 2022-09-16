@@ -12,18 +12,11 @@ body{
     min-height: 100%;
 }
 
-.material-icons {
+.material-symbols-outlined {
     font-weight: normal;
     font-style: normal;
     font-size: 20px;
     display: inline-block;
-}
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
 }
 .meet_body{
     width: 100%;
