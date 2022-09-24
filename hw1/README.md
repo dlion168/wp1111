@@ -13,7 +13,7 @@ Please use **Chrome** or **Edge** to ensure the html can be rendered properly.
 	- 當游標滑⾄每個功能按鈕之上(hover)時，會在功能按鈕上⽅顯⽰此功能之提⽰。
 		![](./img/descript_04.jpg)
 	- 點擊靜⾳按鈕時，可以切換靜⾳/無靜⾳。當然，不⽤真的做到有聲⾳與影像的功能，只是做出按鈕圖⽰變換的效果。
-		Before clicked: ![](./img/descript_02.jpg)
-		After clicked: ![](./img/descript_03.jpg)
+		- Before clicked: ![](./img/descript_02.jpg)
+		- After clicked: ![](./img/descript_03.jpg)
 	- 做到「Responsive Web Design (RWD)」，讓網⾴在放⼤、縮⼩時排版不⾄於亂掉，⽽仍保有原來完整的功能。
 		![](./img/descript_05.jpg)
