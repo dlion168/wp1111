@@ -6,14 +6,6 @@ if (!DOMTokenList.prototype.last){
         return this[this.length - 1];
     };
 };
-(()=>{
-    function starttime(){
-        var date = new Date();
-        var time = (date.getHours()>=12 ? "下午" : "上午")+ date.getHours()%12 + ":" + date.getMinutes();
-        document.querySelectorAll('.meet_time>p')[0].innerHTML = time+" | fsq-gsws-gme";
-    }
-    var current_time = setInterval(starttime(), 1000);
-})();
 
 function Student (appear, id, innerHtml, color, stuname){
     this.appear = appear
@@ -296,3 +288,12 @@ function handle_transition(e){
         }
     }
 }
+(()=>{
+    function starttime(){
+        var date = new Date();
+        var time = (date.getHours()>=12 ? "下午" : "上午")+ date.getHours()%12 + ":" + date.getMinutes();
+        document.getElementById("time_text").innerHTML = time+" | fsq-gsws-gme";
+        console.log(time)
+    }
+    setInterval(starttime, 1000);
+})();
