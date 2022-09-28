@@ -17,8 +17,8 @@
         <div id="meet_person-1">
             <div class="meet_window" stu_idx="0">
                 <div class="meet_mute">
-                    <i class="material-symbols-outlined fill md-light cancel_icon">cancel</i>
-                    <button type="submit" class="mute_btn" id="btn-no-bg"> <i class="material-symbols-outlined fill md-light">mic_off</i>
+                    <i class="material-symbols-outlined fill cancel_icon" id="first_cancel">cancel</i>
+                    <button type="submit" class="mute_btn" id="btn-no-bg"> <i class="material-symbols-outlined fill md-light">mic_off</i></button>
                 </div>
                 <div class="meet_name_circle">
                     <div class="green-circle">
@@ -28,7 +28,7 @@
                 <div class="meet_name">
                     <i class="material-symbols-outlined fill" id="main_pin">push_pin</i>
                     <span id="blank">
-                    林羿成
+                    我
                     </span>
                 </div>
                 <div class="meet_hover-box">
@@ -43,7 +43,7 @@
                 <div class="meet_window" stu_idx="1">
                     <div class="meet_mute">
                         <i class="material-symbols-outlined fill md-light cancel_icon">cancel</i>
-                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i>
+                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i></button>
                     </div>
                     <div class="meet_name_circle">
                         <img class="window_img" src="./img/ty.jpg" alt="陳廷瑜">
@@ -62,7 +62,7 @@
                 <div class="meet_window" stu_idx="2">
                     <div class="meet_mute">
                         <i class="material-symbols-outlined fill md-light cancel_icon">cancel</i>
-                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i>
+                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i></button>
                     </div>
                     <div class="meet_name_circle">
                         <img class="window_img" src="./img/wei.jpg" alt="Weiweihuang">
@@ -81,7 +81,7 @@
                 <div class="meet_window" stu_idx="3">
                     <div class="meet_mute">
                         <i class="material-symbols-outlined fill md-light cancel_icon">cancel</i>
-                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i>
+                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i></button>
                     </div>
                     <div class="meet_name_circle">
                         <img class="window_img" src="./img/lee.jpg" alt="李直謙">
@@ -100,7 +100,7 @@
                 <div class="meet_window" stu_idx="4">
                     <div class="meet_mute">
                         <i class="material-symbols-outlined fill md-light cancel_icon">cancel</i>
-                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i>
+                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i></button>
                     </div>
                     <div class="meet_name_circle">
                         <div class="side-circle">
@@ -117,11 +117,11 @@
                     </div>
                 </div>
             </div>
-            <div class="meet_person-3">
+            <div class="meet_person-2">
                 <div class="meet_window" stu_idx="5">
                     <div class="meet_mute">
                         <i class="material-symbols-outlined fill md-light cancel_icon">cancel</i>
-                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i>
+                        <button type="submit" class="mute_btn"> <i class="material-symbols-outlined fill mute_icon">mic_off</i></button>
                     </div>
                     <div class="meet_name_circle">
                         <div id="purple" class="side-circle">
@@ -139,6 +139,9 @@
                 </div>
             </div>
         </div>
+        <div id="other_user">
+            <p> 和其他1人</p>
+        </div>
     </div>
     <footer class="meet_footer">
         <div class="meet_time">
@@ -152,6 +155,9 @@
                 <button class="red-round-btn hover-tip" id="bot-mid-1" data-hover="開啟麥克風 (Ctrl + D)">
                     <label for="check" id="check-label"><i class="material-symbols-outlined md-light fill" id = "meet_tog-icon"></i> </label>
                 </button>
+            </li>
+            <li>
+                <button class="grey-round-btn hover-tip" type="submit" data-hover="加入新同學"> <i class="material-symbols-outlined fill md-light" id="add">add_circle</i> </button>
             </li>
             <li>
                 <button class="red-round-btn hover-tip" id="bot-mid-2" type="submit" data-hover="開啟攝影機 (Ctrl + E)"> <i class="material-symbols-outlined fill md-light">videocam_off</i> </button>

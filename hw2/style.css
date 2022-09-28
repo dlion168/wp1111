@@ -29,7 +29,7 @@ body{
 
 .meet_body{
     width: 100%;
-    padding: 10px 0px 70px 10px;
+    padding: 10px 0px 60px 10px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -45,7 +45,7 @@ body{
     width: 65%;
     height: 85%;
     top: 0;
-    left: 0;
+    left: 5px;
     padding : 1%;
     background-color: #202124;
     display: flex;
@@ -58,7 +58,7 @@ body{
     right: 0px; 
     padding: 2%;
     width: 30%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -66,19 +66,11 @@ body{
     align-content: space-around;
 }
 .meet_person-2{
-    width: 45%;
-    margin: 5px;
+    width: 47%;
+    margin: 2px;
     height: 34%;
     background-color: #3c4043;
     border: 1px #3c4043;
-    border-radius: 10px;
-}
-.meet_person-3{
-    width: 60%;
-    margin: 5px;
-    height: 34%;
-    border: 1px #3c4043;
-    background-color: #3c4043;
     border-radius: 10px;
 }
 .meet_mute {
@@ -107,6 +99,9 @@ body{
 }
 #btn-no-bg{
     background-color: transparent;
+}
+#first_cancel{
+    visibility: hidden;
 }
 .mute_icon{
     font-size: 18px;
@@ -249,8 +244,12 @@ li {
     border:2px solid #d85140;
     text-align: center;
 }
+.hover-tip{
+    cursor: pointer;
+}
 .hover-tip:before{
     font-size: 12px;
+    cursor: pointer;
     content: attr(data-hover);
     visibility: hidden;
     opacity: 0;
@@ -299,7 +298,12 @@ li {
     align-items: center;
     margin: auto 5px auto 5px;
 }
-
+#other_user{
+    position: absolute;
+    bottom: 83px;
+    right: 33px;
+    visibility: hidden;
+}
 .meet_side-bar-btn{
     width: 15%;
     display: inline-flex;
