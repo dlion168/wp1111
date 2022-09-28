@@ -153,6 +153,7 @@ function handle_transition(e){
         }
         else if (side_arr.length <= 12){
             for (var i = 0; i < side_arr.length ; i++){
+                document.getElementById("meet_col-2").children[i].style.display = "block"
                 document.getElementById("meet_col-2").children[i].style.width = "22%"
                 document.getElementById("meet_col-2").children[i].style.height = "35%"
                 if ( i>=(side_arr.length-9)*4){
@@ -162,6 +163,7 @@ function handle_transition(e){
         }
         else if (side_arr.length <= 15){
             for (var i = 0; i < side_arr.length ; i++){
+                document.getElementById("meet_col-2").children[i].style.display = "block"
                 document.getElementById("meet_col-2").children[i].style.width = "18%"
                 document.getElementById("meet_col-2").children[i].style.height = "32%"
                 if ( i> (side_arr.length-12)*5-1 ){
@@ -187,7 +189,10 @@ function handle_transition(e){
                 newDiv.innerHTML = windowHtml
                 newDiv.classList.add("meet_person-2")
                 set_window(newDiv.children[0], pin_id)
-                newDiv.children[0].children[0].style.visibility="hidden" // remove 我's cancel button
+                if (pin_id == 0){
+                    newDiv.children[0].children[0].style.visibility="hidden" // remove 我's cancel button
+                }
+                document.getElementById("first_cancel").style.visibility="hidden"
                 document.getElementById("meet_col-2").insertBefore(newDiv, null)
                 align_unpinned()
             }
@@ -227,7 +232,7 @@ function handle_transition(e){
             document.getElementById("meet_person-1").children[0].children[1].children[0].style.height="120px"
             document.getElementById("meet_person-1").children[0].children[1].children[0].style.lineHeight="120px"
             document.getElementById("meet_person-1").children[0].children[1].children[0].style.fontSize="50px"
-            document.getElementById("meet_person-1").children[0].children[0].children[0].style.visibility="visible"
+            document.getElementById("meet_person-1").children[0].children[0].children[0].style.visibility = (pin_id==0)?"hidden":"visible"
             align_pinned()
         }
     }
@@ -291,7 +296,7 @@ function handle_transition(e){
 (()=>{
     function starttime(){
         var date = new Date();
-        var time = (date.getHours()>=12 ? "下午" : "上午")+ date.getHours()%12 + ":" + date.getMinutes();
+        var time = (date.getHours()>=12 ? "下午" : "上午")+ (date.getHours()%12>9? date.getHours()%12 : "0"+date.getHours()%12) + ":" + (date.getMinutes()>9?date.getMinutes():"0"+date.getMinutes());
         document.getElementById("time_text").innerHTML = time+" | fsq-gsws-gme";
     }
     setInterval(starttime, 1000);
