@@ -293,7 +293,6 @@ function handle_transition(e){
         var date = new Date();
         var time = (date.getHours()>=12 ? "下午" : "上午")+ date.getHours()%12 + ":" + date.getMinutes();
         document.getElementById("time_text").innerHTML = time+" | fsq-gsws-gme";
-        console.log(time)
     }
     setInterval(starttime, 1000);
 })();
