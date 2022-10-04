@@ -4,7 +4,7 @@ import cross from './img/x.png'
 class App extends Component {
   constructor(props){
     super(props);
-    this.state={item:0, undone:0, inputtext:"", todolist:[], displayMode:"all",displaylist:[], keynum:0}
+    this.state={undone:0, inputtext:"", todolist:[], displayMode:"all", keynum:0, displayList:[]}
     this.handleChange = this.handleChange.bind(this)
     this.addTask = this.addTask.bind(this)
     this.toggleTask = this.toggleTask.bind(this)
@@ -18,37 +18,57 @@ class App extends Component {
       if (this.state.inputtext !== ""){
         this.setState((state)=>({todolist:[...state.todolist,{id:state.keynum, text:state.inputtext, done:false}]}))
         this.setState({inputtext:""})
-        this.setState((state)=>({item:state.item+=1, undone:state.undone+=1, keynum:state.keynum+1}))
-        if (displayMode ==="all" || displayMode==="Active"){
-          this.setState((state)=>({displaylist:[...state.displaylist, {id:state.keynum, text:state.inputtext, done:false}]}))
-        }
+        this.setState((state)=>({undone:state.undone+=1, keynum:state.keynum+1}))
+        this.setState((state)=>({displayList:(state.displayMode === "all") ? state.todolist: (state.displayMode === "done") ? 
+        state.todolist.filter((item)=>item.done===true):state.todolist.filter((item)=>item.done===false)}))
       }
     }
   }
   toggleTask = (e)=>{
     if (e.target.tagName === "INPUT"){
       this.setState((state)=>({
-        undone : state.todolist.find((item)=>{return item.id === parseInt(e.target.id)}).done ? (state.undone+1):(state.undone-1),
+        undone : state.todolist.find((item)=>{return item.id === parseInt(e.target.id)}).done ? (state.undone+1):(state.undone-1)
       }))
       this.setState((state)=>({  
-        todolist : state.todolist.map((obj)=> (obj.id === parseInt(e.target.id))? Object.assign(obj, { done: !obj.done}) : obj)
+        todolist : state.todolist.map((obj)=> (obj.id === parseInt(e.target.id))? Object.assign(obj, { done: !obj.done}) : obj),
+        displayList:(state.displayMode === "all") ? state.todolist: (state.displayMode === "done") ? 
+        state.todolist.filter((item)=>item.done===true):state.todolist.filter((item)=>item.done===false)
       }))
     }
   }
   deleteTask = (e)=>{
     this.setState((state)=>({
-      undone : state.todolist.find((item)=>{item.id==e.target.id}).done ? (state.undone):(state.undone-1)
+      undone : (state.todolist.find((item)=>{return item.id === parseInt(e.target.parentElement.children[0].children[0].id)}).done) ? (state.undone):(state.undone-1),
+      item : state.item-1, 
+      todolist : [...state.todolist.slice(0,state.todolist.findIndex((item)=>{return item.id === parseInt(e.target.parentElement.children[0].children[0].id)})) ,
+       ...state.todolist.slice(state.todolist.findIndex((item)=>{return item.id === parseInt(e.target.parentElement.children[0].children[0].id)})+1)]
     }))
     this.setState((state)=>({
-      item : state.item-1
+      displayList:(state.displayMode === "all") ? state.todolist: (state.displayMode === "done") ? 
+      state.todolist.filter((item)=>item.done===true):state.todolist.filter((item)=>item.done===false)
     }))
-    this.setState((state)=>({  
-      todolist : state.todolist.splice(state.todolist.findIndex((item)=>{item.id==e.target.id}),1)
-    }))
+    console.log(this.state.displayList)
   }
-  // filterActive = ()=>{
-  //   this.
-  // }
+  filterActive = ()=>{
+    this.setState({displayMode:"undone"})
+    this.setState((state)=>({displayList:(state.displayMode === "all") ? state.todolist: (state.displayMode === "done") ? 
+    state.todolist.filter((item)=>item.done===true):state.todolist.filter((item)=>item.done===false)}))
+  }
+  filterComplete =() =>{
+    this.setState({displayMode:"done"})
+    this.setState((state)=>({displayList:(state.displayMode === "all") ? state.todolist: (state.displayMode === "done") ? 
+    state.todolist.filter((item)=>item.done===true):state.todolist.filter((item)=>item.done===false)}))
+  }
+  filterAll =() =>{
+    this.setState({displayMode:"all"})
+    this.setState((state)=>({displayList:(state.displayMode === "all") ? state.todolist: (state.displayMode === "done") ? 
+    state.todolist.filter((item)=>item.done===true):state.todolist.filter((item)=>item.done===false)}))
+  }
+  clearComplete = () =>{
+    this.setState((state)=>({todolist:state.todolist.filter((item)=>item.done===false)}))
+    this.setState((state)=>({displayList:(state.displayMode === "all") ? state.todolist: (state.displayMode === "done") ? 
+    state.todolist.filter((item)=>item.done===true):state.todolist.filter((item)=>item.done===false)}))
+  }
 
   render(){
     return (
@@ -62,22 +82,24 @@ class App extends Component {
           onChange={this.handleChange} 
           onKeyDown={this.addTask}
           value={this.state.inputtext}/>
-          <TodoList todolist={this.state.displaylist} toggle={this.toggleTask} delete={this.deleteTask} item={this.state.item}/>
+          <TodoList todolist={this.state.displayList} toggle={this.toggleTask} delete={this.deleteTask} length={this.state.todolist.length}/>
         </section>
         <footer className="todo-app__footer" id="todo-footer" style={{
-          display: (this.state.item>0)? "flex":"none",
+          display: (this.state.todolist.length>0)? "flex":"none",
         }}>
           <div className="todo-app__total">
             <span id="todo-count">{this.state.undone}</span>
-             left
+            &nbsp; left
           </div>
           <ul className="todo-app__view-buttons">
-            <li><button id="todo-all">All</button></li>
-            <li><button id="todo-active" onClick={self.filterActive}>Active</button></li>
-            <li><button id="todo-completed" onClick={self.filterComplete}>Completed</button></li>
+            <li><button id="todo-all" onClick={this.filterAll}>All</button></li>
+            <li><button id="todo-active" onClick={this.filterActive}>Active</button></li>
+            <li><button id="todo-completed" onClick={this.filterComplete}>Completed</button></li>
           </ul>
           <div className="todo-app__clean">
-            <button id="todo-clear-complete"> Clear completed </button>
+            <button id="todo-clear-complete" style={{
+              visibility:(this.state.todolist.filter((item)=>item.done===true).length===0)?"hidden":"visible"
+            }} onClick={this.clearComplete}> Clear completed </button>
           </div>
         </footer>
     </div>
@@ -98,12 +120,12 @@ class TodoList extends React.Component {
   render() {
     return (
       <ul id="todo-list" className="todo-app___list" style={{
-        display: this.props.item>0? "block":"none",
+        display: this.props.length>0? "block":"none",
       }}>
         {this.props.todolist.map(item => (
           <li className="todo-app__item" key={item.id}>
             <div className="todo-app__checkbox" onClick={this.props.toggle}>
-              <input id={item.id} type="checkbox"/>
+              <input id={item.id} type="checkbox" checked={item.done}/>
               <label htmlFor={item.id}></label>
             </div>
             <h1 className='todo-app__item-detail' style={item.done?styles.Active : styles.Inactive}>
