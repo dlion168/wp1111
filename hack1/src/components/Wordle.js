@@ -24,6 +24,9 @@ const Wordle = ({ solution }) => {
         window.addEventListener('keyup', handleKeyup);
             if (isCorrect) {
                 setTimeout(() => {
+                    setResult("You win!!!!")
+                    setGameOver(true)
+                    setWin(true)
                     // TODO 6: Implementation for the result of the game
                     // Hint: Add some conditions in `useEffect` to maintain `result`, `gameOver`, `win`.
                     // Result format: "You win!!!!"
@@ -32,6 +35,7 @@ const Wordle = ({ solution }) => {
             }
             else if (turn > 5) {
                 setTimeout(() => {
+                    setGameOver(true)
                     // TODO 6: Implementation for the result of the game
                     // Hint: Add some conditions in `useEffect` to maintain `result`, `gameOver`, `win`.
                     // Result format: "You lose!!!! The answer is windy." (If the solution is 'windy')
