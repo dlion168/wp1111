@@ -6,8 +6,5 @@
   "scripts": {
     "start": "cd frontend && yarn start",
     "server": "cd backend && yarn server"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0"
   }
 }

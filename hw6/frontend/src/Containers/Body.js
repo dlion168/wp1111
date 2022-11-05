@@ -39,7 +39,7 @@ const ContentPaper = styled(Paper)`
 const Body = () => {
   const classes = useStyles();
 
-  const { messages, addCardMessage, addRegularMessage, addErrorMessage } =
+  const { messages, addCardMessage, addRegularMessage, addErrorMessage} =
     useScoreCard();
 
   const [name, setName] = useState('');

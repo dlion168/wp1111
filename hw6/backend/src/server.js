@@ -12,13 +12,9 @@ datb.once("open", async () => {
     console.log("Database Connected.");
    });
 
-app.use(cors);
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-app.get('/', (req, res) => {
-    console.log(req);
-    res.send('Hello, World!');
-   });
 app.listen(port, () =>
    console.log(`Example app listening on port ${port}!`),
   );
