@@ -19,10 +19,8 @@ exports.GetSearch = async (req, res) => {
     const sortBy      = req.query.sortBy
     /****************************************/
     const condition ={}
-    console.log(sortBy)
     // // NOTE Hint: 
     await Info.find({condition}).exec((err, data)=>{
-        console.log(err)
         if (err){
             return res.status(403).send({ message: 'error', contents: err })
             }
@@ -38,12 +36,11 @@ exports.GetSearch = async (req, res) => {
             }
 
             if (sortBy == 'price'){
-                console.log(data)
-                data = data.sort((p1,p2) => (p1.price < p2.price))
+                data = data.sort((p1,p2) => {return p1.price - p2.price})
                 
             }
             else if (sortBy == 'distance'){
-                data = data.sort((p1,p2) => (p1.distance <p2.distance))
+                data = data.sort((p1,p2) => {return p1.distance - p2.distance})
             }
             return res.status(200).send({ message: 'success', contents: data })
         }
