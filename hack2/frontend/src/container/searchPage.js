@@ -19,9 +19,7 @@ const SearchPage = () => {
     const { state } = useLocation();
     const [restaurants, setRestaurant] = useState([])
     const getRestaurant = async () => {
-        console.log(state)
         const data = await instance.get('/getSearch', { params: state  });
-        console.log(data)
         if (data.data.message === 'success') setRestaurant(data.data.contents)
     }
 
@@ -46,7 +44,8 @@ const SearchPage = () => {
             {
                 restaurants.map((item) => (
                     // TODO Part I-2: search page front-end
-                    <div className='resBlock' id={item.id} key={item.id}>
+                    // 
+                    <div className='resBlock' id={item.id} key={item.id} onClick={() => ToRestaurant(item.id)}> 
                         <div className='resImgContainer'>
                             <img className='resImg' src={item.img}>
                             </img>
@@ -55,7 +54,7 @@ const SearchPage = () => {
                             <div className='title'>
                                 <p className='name'>{item.name}</p>
                                 <p className='price'>{getPrice(item.price)}</p>
-                                <p className='distance'>{item.distance/1000}km</p>
+                                <p className='distance'>{item.distance/1000} km</p>
                             </div>
                             <p className='description'>{item.tag.join(', ')}</p>
                         </div>

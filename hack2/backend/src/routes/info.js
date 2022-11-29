@@ -11,7 +11,6 @@
 import Info from '../models/info'
 
 exports.GetSearch = async (req, res) => {
-    console.log(req.query)
     /*******    NOTE: DO NOT MODIFY   *******/
     const priceFilter = req.query.priceFilter
     const mealFilter  = req.query.mealFilter
@@ -26,11 +25,43 @@ exports.GetSearch = async (req, res) => {
             }
         else {
             let index = data.length -1
-            if (priceFilter || mealFilter || typeFilter){
+            if ( priceFilter ){
+                const pIntFilter = priceFilter.map((ele)=>{
+                    return ele.length
+                })
                 while (index >=0) {
-                    if (!(data[index].price in priceFilter) || !(data[index].meal in mealFilter) || !(data[index].meal in typeFilter)){
+                    if (!(pIntFilter.includes(data[index].price))){
                         data.splice(index,1)
                     }
+                    index -= 1
+                }
+            }
+            index = data.length -1
+            if ( mealFilter ){
+                while (index >=0) {
+                    let isInFilter= false
+                    for (var j=0; j<data[index].tag.length; j++){
+                        if (mealFilter.includes(data[index].tag[j])){
+                            isInFilter = true 
+                            break
+                        }
+                    }
+                    if (!isInFilter){
+                        data.splice(index,1)
+                    }
+                    index -= 1
+                }
+            }
+            index = data.length -1
+            if ( typeFilter ){
+                while (index >=0) {
+                    for (var j=0; j<data[index].tag.length; j++){
+                        if (typeFilter.includes(data[index].tag[j])){
+                            index -= 1
+                            break
+                        }
+                    }
+                    data.splice(index,1)
                     index -= 1
                 }
             }
@@ -42,6 +73,7 @@ exports.GetSearch = async (req, res) => {
             else if (sortBy == 'distance'){
                 data = data.sort((p1,p2) => {return p1.distance - p2.distance})
             }
+            console.log(data.length)
             return res.status(200).send({ message: 'success', contents: data })
         }
         }
@@ -58,7 +90,7 @@ exports.GetInfo = async (req, res) => {
     /*******    NOTE: DO NOT MODIFY   *******/
     const id = req.query.id
     /****************************************/
-
+    console.log(id)
     // NOTE USE THE FOLLOWING FORMAT. Send type should be 
     // if success:
     // {
@@ -73,12 +105,11 @@ exports.GetInfo = async (req, res) => {
 
     // TODO Part III-2: find the information to the restaurant with the id that the user requests
     const condition = {id: id}
-    await Info.collection.find({condition}).exec((err, data)=>{
-        console.log(err, data)
+    await Info.findOne(condition).exec((err, data)=>{
         if (err){
-            return res.status(200).send({ message: 'error', contents: [] })}
+            return res.status(403).send({ message: 'error', info: [] })}
         else {
-            return res.status(403).send({ message: 'success', contents: res })}
+            return res.status(200).send({ message: 'success', info: data })}
         }
     )
 }
