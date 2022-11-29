@@ -25,7 +25,7 @@ const RestaurantPage = () => {
     const getInfo = async () => {
         // TODO Part III-2: get a restaurant's info
         const data = await instance.get('/getInfo', { params: {id: id}  });
-        if (data.data.message === 'success') setInfo(data.data.info)
+        if (data.data.message === 'success') setInfo(data.data.contents)
     }
     const getComments = async () => {
         // TODO Part III-3: get a restaurant's comments \

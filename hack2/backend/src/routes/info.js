@@ -90,7 +90,6 @@ exports.GetInfo = async (req, res) => {
     /*******    NOTE: DO NOT MODIFY   *******/
     const id = req.query.id
     /****************************************/
-    console.log(id)
     // NOTE USE THE FOLLOWING FORMAT. Send type should be 
     // if success:
     // {
@@ -107,9 +106,9 @@ exports.GetInfo = async (req, res) => {
     const condition = {id: id}
     await Info.findOne(condition).exec((err, data)=>{
         if (err){
-            return res.status(403).send({ message: 'error', info: [] })}
+            return res.status(403).send({ message: 'error', contents: [] })}
         else {
-            return res.status(200).send({ message: 'success', info: data })}
+            return res.status(200).send({ message: 'success', contents: data })}
         }
     )
 }

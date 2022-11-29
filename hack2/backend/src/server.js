@@ -33,11 +33,6 @@ const dboptions = {
     useUnifiedTopology: true,
 }
 
-if (!process.env) {
-   console.error("Missing .env!!!");
-   process.exit(1);
-}
-
 mongoose.connect(
     process.env.MONGO_URL, dboptions
     // TODO Part I-3: connect the backend to mongoDB
@@ -47,9 +42,6 @@ mongoose.connect(
         dataInit()
     }
 }).then((res) => console.log("mongo db connection created"));
-
-// TODO Part I-3: check DB connection
-mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
 
 routes(app)
 app.listen(port, () => {
