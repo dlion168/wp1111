@@ -34,12 +34,19 @@ const Information = ({ info, rating }) => {
             </>
         )
     }
-
+let days = ['Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat', 'Sun']
     const getBusiness = (time) => {
         return (
             <div className='businessTime'>
                 {/* TODO Part III-2-c: render business time for each day*/
-                    Object.entries(time).map( e => { 
+                    time.hasOwnProperty('All')?
+                    days.map( e => { 
+                        return(<div className='singleDay'>
+                            <div className='day'>{e}</div>
+                            <div className='time'>{time.All}</div>
+                        </div>)
+                    })
+                    :Object.entries(time).map( e => { 
                         return(<div className='singleDay'>
                             <div className='day'>{e[0]}</div>
                             <div className='time'>{e[1]}</div>
