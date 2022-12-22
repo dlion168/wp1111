@@ -17,6 +17,7 @@
     "@babel/preset-env": "^7.20.2"
   },
   "scripts": {
-    "server": "nodemon src/server.js --ext js --watch src --exec babel-node"
+    "server": "nodemon src/server.js --ext js --watch src --exec babel-node",
+    "build": "react-scripts build"
   }
 }
