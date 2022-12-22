@@ -9,7 +9,6 @@ const ChatContext = createContext({
     signedIn: false,
     messages: [],
     sendMessage: () => {},
-    //clearMessages: () => {},
     startChat: ()=>{},
    });
 
