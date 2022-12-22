@@ -7,6 +7,7 @@ export default {
     console.error("Missing MONGO_URL!!!");
     process.exit(1);
  }
+ 
  mongoose.connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true, })
