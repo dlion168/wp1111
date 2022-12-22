@@ -8,7 +8,7 @@ export default {
     process.exit(1);
  }
  
- mongoose.connect(process.env.MONGO_URL, {
+ mongoose.connect(process.env.REACT_APP_MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true, })
  .then((res) => console.log("mongo db connection created"));
