@@ -12,7 +12,7 @@ const ChatContext = createContext({
     startChat: ()=>{},
    });
 
-const client = new WebSocket('wss://wp1111-hw9-backend-production-4e1e.up.railway.app')
+const client = new WebSocket('wss://localhost:4000')
 
 const ChatProvider = (props) => {
     const [status, setStatus] = useState({});

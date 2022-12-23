@@ -6,7 +6,8 @@
   "scripts": {
     "start": "cd frontend && yarn start",
     "server": "cd backend && yarn server",
-    "build": "cd frontend && yarn build",
+    "install:prod": "cd frontend && yarn install && cd ../backend && yarn install && cd ../ ",
+    "build": "cd frontend && yarn build && cd ..",
     "deploy": "cd backend && yarn deploy"
   }
 }
