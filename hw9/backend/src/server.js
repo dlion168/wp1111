@@ -20,6 +20,6 @@ db.once('open', () => {
    console.log(ws.id)
 });
 });
-const PORT = process.env.REACT_APP_PORT || 4000;
+const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
    console.log(`Example app listening on port ${PORT}!`) });
