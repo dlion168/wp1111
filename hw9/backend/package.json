@@ -19,6 +19,6 @@
   },
   "scripts": {
     "server": "nodemon src/server.js --ext js --watch src --exec babel-node",
-    "deploy": "NODE_ENV=production babel-node server.js"
+    "deploy": "NODE_ENV=production babel-node src/server.js"
   }
 }
