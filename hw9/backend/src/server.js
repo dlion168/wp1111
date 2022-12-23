@@ -17,6 +17,7 @@ db.once('open', () => {
    ws.id = uuidv4();
    ws.box = '';
    ws.onmessage = wsConnect.onMessage(ws); 
+   console.log(ws.id)
 });
 });
 const PORT = process.env.REACT_APP_PORT || 4000;
