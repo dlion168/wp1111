@@ -38,7 +38,7 @@ mongoose.connect(
     // TODO Part I-3: connect the backend to mongoDB
 ).then(async res => {
     if (process.env.MODE === 'Reset') {
-        console.log('Reset Mode: reset the data')
+        console.log('Reset Mode: reset checklist data')
         dataInit()
     }
 }).then((res) => console.log("mongo db connection created"));
