@@ -1,0 +1,326 @@
+[
+    {
+        "intro": "When you're gearing up for baby, there's a lot to do. This handy month-by-month pregnancy checklist walks you through the key tasks for every stage of the journey, from TTC to your first month with baby.",
+        "title": "TTC Checklist",
+        "data": [
+            { "week": 0, "checked": true, "text": "Start taking prenatal vitamins.", "liked": true },
+            { "week": 0, "checked": true, "text": "Talk to relatives about your family medical history, including birth defects, miscarriages and genetic disorders", "liked": true },
+            { "week": 0, "checked": false, "text": "Get a preconception checkup.", "liked": false },
+            { "week": 0, "checked": false, "text": "Get a tetanus booster and German measles and chicken pox.", "liked": false },
+            { "week": 0, "checked": false, "text": "See the dentist", "liked": false },
+            { "week": 0, "checked": false, "text": "If you're self-employed, apply for a private disability policy", "liked": false }
+        ]
+    },
+    {
+        "intro": "Congratulations, mama - you're pregnant! You're probably overcome with joy and maybe a little anxious, too. Don't stress! Here's what you'll need to tackle during your first trimester:",
+        "title": "Week 1 of Pregnancy",
+        "data": [
+            { "week": 1, "checked": false, "text": "Write down the date of your last period or two", "liked": true },
+            { "week": 1, "checked": false, "text": "With your partner, create a family health history, including any genetic or chromosomal disorders", "liked": false },
+            { "week": 1, "checked": false, "text": "Quit smoking, and focus on having a healthy diet and lifestyle", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 2 of Pregnancy",
+        "data": [
+            { "week": 2, "checked": false, "text": "Health check", "liked": false },
+            { "week": 2, "checked": false, "text": "Make an appointment with health consultant", "liked": false },
+            { "week": 2, "checked": true, "text": "Start taking a prenatal vitamin that includes folic acid if you haven't already", "liked": true }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 3 of Pregnancy",
+        "data": [
+            { "week": 3, "checked": false, "text": "Pregnency test", "liked": false },
+            { "week": 3, "checked": false, "text": "Reduce coffee intake", "liked": false },
+            { "week": 3, "checked": false, "text": "Quit smoking and drinking", "liked": false },
+            { "week": 3, "checked": false, "text": "Take folic acid supplement", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 4 of Pregnancy",
+        "data": [
+            { "week": 4, "checked": false, "text": "Pregnency test", "liked": false },
+            { "week": 4, "checked": false, "text": "Book a prenatal visit", "liked": false },
+            { "week": 4, "checked": false, "text": "Seek help if you have not been able to conceive", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 5 of Pregnancy",
+        "data": [
+            { "week": 5, "checked": false, "text": "Talk to the maternal and patrilineal families about the family genetic history", "liked": false },
+            { "week": 5, "checked": false, "text": "Keep a list of the medicines you take, including supplements", "liked": false },
+            { "week": 5, "checked": false, "text": "Keep track of the first day of your last period", "liked": false },
+            { "week": 5, "checked": false, "text": "Make a note of the questions you want to ask during your first prenatal visit", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 6 of Pregnancy",
+        "data": [
+            { "week": 6, "checked": false, "text": "See which foods you need to avoid now.", "liked": false },
+            { "week": 6, "checked": false, "text": "Understand prenatal screening", "liked": false },
+            { "week": 6, "checked": false, "text": "Ensure safety in your workplace", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 7 of Pregnancy",
+        "data": [
+            { "week": 7, "checked": false, "text": "In case of bleeding, contact your doctor", "liked": false },
+            { "week": 7, "checked": false, "text": "Try to eat well", "liked": false },
+            { "week": 7, "checked": false, "text": "Make a list of food that won't make you feel sick", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 8 of Pregnancy",
+        "data": [
+            { "week": 8, "checked": false, "text": "Go to bed early", "liked": false },
+            { "week": 8, "checked": false, "text": "Record belly size", "liked": false },
+            { "week": 8, "checked": false, "text": "Pay attention to mental health", "liked": false },
+            { "week": 8, "checked": false, "text": "Wash, dry and collect the clothes that are too tight for you", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 9 of Pregnancy",
+        "data": [
+            { "week": 9, "checked": false, "text": "Go to bed early", "liked": false },
+            { "week": 9, "checked": false, "text": "Go for a walk", "liked": false },
+            { "week": 9, "checked": false, "text": "Start a little ritual to bond with your baby", "liked": false },
+            { "week": 9, "checked": false, "text": "Do pelvic Kegel exercises every day from now on", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 10 of Pregnancy",
+        "data": [
+            { "week": 10, "checked": false, "text": "Involve your partner in the pregenency process", "liked": false },
+            { "week": 10, "checked": false, "text": "Avoid urinary tract infections (UTIs) during pregnency", "liked": false },
+            { "week": 10, "checked": false, "text": "Consider non-invasive prenatal chromosomal testing (NIPT)", "liked": false },
+            { "week": 10, "checked": false, "text": "Read the health education manual for pregnant women", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 11 of Pregnancy",
+        "data": [
+            { "week": 11, "checked": false, "text": "Build your support network", "liked": false },
+            { "week": 11, "checked": false, "text": "Reduce waiting time for prenatal checkups", "liked": false },
+            { "week": 11, "checked": false, "text": "Discuss how to tell your friends about the pregnency with your partner.", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 12 of Pregnancy",
+        "data": [
+            { "week": 12, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 13 of Pregnancy",
+        "data": [
+            { "week": 13, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 14 of Pregnancy",
+        "data": [
+            { "week": 14, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 15 of Pregnancy",
+        "data": [
+            { "week": 15, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 16 of Pregnancy",
+        "data": [
+            { "week": 16, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 17 of Pregnancy",
+        "data": [
+            { "week": 17, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 18 of Pregnancy",
+        "data": [
+            { "week": 18, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "Week 19 of Pregnancy",
+        "data": [
+            { "week": 19, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 20 of Pregnancy",
+        "data": [
+            { "week": 20, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 21 of Pregnancy",
+        "data": [
+            { "week": 21, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 22 of Pregnancy",
+        "data": [
+            { "week": 22, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 23 of Pregnancy",
+        "data": [
+            { "week": 23, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 24 of Pregnancy",
+        "data": [
+            { "week": 24, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 25 of Pregnancy",
+        "data": [
+            { "week": 25, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 26 of Pregnancy",
+        "data": [
+            { "week": 26, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 27 of Pregnancy",
+        "data": [
+            { "week": 27, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 28 of Pregnancy",
+        "data": [
+            { "week": 28, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 29 of Pregnancy",
+        "data": [
+            { "week": 29, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 30 of Pregnancy",
+        "data": [
+            { "week": 30, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 31 of Pregnancy",
+        "data": [
+            { "week": 31, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 32 of Pregnancy",
+        "data": [
+            { "week": 32, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 33 of Pregnancy",
+        "data": [
+            { "week": 33, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 34 of Pregnancy",
+        "data": [
+            { "week": 34, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 35 of Pregnancy",
+        "data": [
+            { "week": 35, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 36 of Pregnancy",
+        "data": [
+            { "week": 36, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 37 of Pregnancy",
+        "data": [
+            { "week":37, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 38 of Pregnancy",
+        "data": [
+            { "week": 38, "checked": false, "text": "something to do", "liked": false }
+        ]
+    },
+    {
+        "intro": "intro text",
+        "title": "week 39 of Pregnancy",
+        "data": [
+            { "week": 39, "checked": false, "text": "Buy nursing underwear", "liked": false },
+            { "week": 39, "checked": false, "text": "Know your postpartum body", "liked": false },
+            { "week": 39, "checked": false, "text": "Make a list of things to help you relax", "liked": false },
+            { "week": 39, "checked": false, "text": "If you're worrying about being noisy in the same room with others, prepare anti-noise headphones, relaxing music and eye masks", "liked": false }
+        ]
+    },
+    {
+        "intro": "Dear, how are you today? What are you going through, what are you feeling?\nFrom the first week of pregnancy, the second week, the tenth week, the twentieth week, the thirtieth week... until now.\nBabies at this age, whether they are fetuses still in our womb or newborns who have already been born, are quite mature and ready to meet and fall in love with their mothers at any time.",
+        "title": "week 40 of Pregnancy",
+        "data": [
+            { "week": 40, "checked": false, "text": "If you're passed your due date, take it easy", "liked": false },
+            { "week": 40, "checked": false, "text": "Give yourself a rest", "liked": false },
+            { "week": 40, "checked": false, "text": "Make an ultimate list of baby names", "liked": false }
+        ]
+    }
+]

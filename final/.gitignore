@@ -1,0 +1,20 @@
+node_modules/
+.vscode/
+.expo/
+.expo-shared/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+package-lock.json
+
+# macOS
+.DS_Store
+.env
+
+*.sh
